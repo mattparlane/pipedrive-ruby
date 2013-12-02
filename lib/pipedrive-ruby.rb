@@ -9,6 +9,7 @@ require 'pipedrive/product'
 require 'pipedrive/pipeline'
 require 'pipedrive/stage'
 require 'pipedrive/note'
+require 'pipedrive/user'
 
 module Pipedrive
 
