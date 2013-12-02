@@ -91,8 +91,13 @@ module Pipedrive
       end
 
       def find(id)
-        res = get "#{resource_path}/#{id}"
-        res.ok? ? new(res) : bad_response(res)
+        if id.is_a?(Hash)
+          res = get "#{resource_path}/", :query => id
+          res.ok? ? new_list(res) : bad_response(res)
+        else
+          res = get "#{resource_path}/#{id}"
+          res.ok? ? new(res) : bad_response(res)
+        end
       end
 
       def find_by_name(name, opts={})
