@@ -10,6 +10,7 @@ require 'pipedrive/pipeline'
 require 'pipedrive/stage'
 require 'pipedrive/note'
 require 'pipedrive/user'
+require 'pipedrive/filter'
 
 module Pipedrive
 
